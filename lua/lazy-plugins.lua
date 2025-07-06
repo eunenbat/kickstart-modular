@@ -27,7 +27,11 @@ require("lazy").setup({
 	-- require("kickstart.plugins.dashboard-nvim"),
 	require("kickstart.plugins.one-liners"),
 
-	require("kickstart.plugins.fzf-lua"),
+	require("kickstart.plugins.lualine"),
+
+	require("kickstart.plugins.harpoon"),
+
+	-- require("kickstart.plugins.fzf-lua"),
 
 	require("kickstart.plugins.snacks"),
 
