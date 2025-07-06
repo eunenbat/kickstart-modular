@@ -1,5 +1,24 @@
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+-- load the session for the current directory
+-- vim.keymap.set("n", "<leader>qs", function()
+-- 	require("persistence").load()
+-- end)
+
+-- select a session to load
+vim.keymap.set("n", "<leader>qs", function()
+	require("persistence").select()
+end, { desc = "select a session to load" })
+
+-- load the last session
+vim.keymap.set("n", "<leader>ql", function()
+	require("persistence").load({ last = true })
+end, { desc = "load the last session" })
+
+-- stop Persistence => session won't be saved on exit
+vim.keymap.set("n", "<leader>qd", function()
+	require("persistence").stop()
+end, { desc = "session wont be saved on exit" })
 
 -- Previous buffer
 vim.keymap.set("n", "[b", ":bprevious<CR>", { desc = "Previous buffer" })
@@ -8,14 +27,14 @@ vim.keymap.set("n", "[b", ":bprevious<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
 
 -- Close current buffer
-vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
+-- vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 -- Diagnostic keymaps
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+-- vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which

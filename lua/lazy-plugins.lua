@@ -12,6 +12,14 @@
 require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
+	-- Lua
+	{
+		"folke/persistence.nvim",
+		event = "BufReadPre", -- this will only start session saving when an actual file was opened
+		opts = {
+			-- add any custom options here
+		},
+	},
 	-- "karb94/neoscroll.nvim",
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -22,13 +30,19 @@ require("lazy").setup({
 
 	-- modular approach: using `require 'path.name'` will
 	-- include a plugin definition from file lua/path/name.lua
-	require("kickstart.plugins.dashboard-nvim"),
+	-- require("kickstart.plugins.dashboard-nvim"),
+
+	require("kickstart.plugins.fzf-lua"),
+
+	require("kickstart.plugins.snacks"),
+
+	require("kickstart.plugins.smear-cursor"),
 
 	require("kickstart.plugins.nvim-emmet"),
 
 	require("kickstart.plugins.render-markdown"),
 
-	require("kickstart.plugins.auto-session"),
+	-- require("kickstart.plugins.auto-session"),
 
 	require("kickstart.plugins.neoscroll"),
 
@@ -36,7 +50,7 @@ require("lazy").setup({
 
 	require("kickstart.plugins.which-key"),
 
-	require("kickstart.plugins.telescope"),
+	-- require("kickstart.plugins.telescope"),
 
 	require("kickstart.plugins.lspconfig"),
 
@@ -65,7 +79,7 @@ require("lazy").setup({
 	require("kickstart.plugins.indent_line"),
 	require("kickstart.plugins.lint"),
 	require("kickstart.plugins.autopairs"),
-	require("kickstart.plugins.neo-tree"),
+	-- require("kickstart.plugins.neo-tree"),
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.

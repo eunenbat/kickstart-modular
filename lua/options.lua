@@ -8,6 +8,7 @@ vim.opt.tabstop = 2 -- Number of spaces a tab character represents
 vim.opt.shiftwidth = 2 -- Number of spaces to use for each indentation level
 vim.opt.expandtab = true -- Use spaces instead of actual tab characters
 
+vim.g.autoformat = false
 -- Make line numbers default
 vim.o.number = true
 -- You can also add relative line numbers, to help with jumping.

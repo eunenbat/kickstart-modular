@@ -19,7 +19,7 @@ return {
 			require("mini.cursorword").setup()
 			require("mini.tabline").setup()
 			require("mini.icons").setup()
-			require("mini.indentscope").setup()
+			-- require("mini.indentscope").setup()
 
 			-- Simple and easy statusline.
 			--  You could remove this setup call if you don't like it,
