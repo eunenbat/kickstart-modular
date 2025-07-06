@@ -13,13 +13,7 @@ require("lazy").setup({
 	-- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
 	"NMAC427/guess-indent.nvim", -- Detect tabstop and shiftwidth automatically
 	-- Lua
-	{
-		"folke/persistence.nvim",
-		event = "BufReadPre", -- this will only start session saving when an actual file was opened
-		opts = {
-			-- add any custom options here
-		},
-	},
+	-- { "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 	-- "karb94/neoscroll.nvim",
 	-- NOTE: Plugins can also be added by using a table,
 	-- with the first argument being the link and the following
@@ -31,6 +25,7 @@ require("lazy").setup({
 	-- modular approach: using `require 'path.name'` will
 	-- include a plugin definition from file lua/path/name.lua
 	-- require("kickstart.plugins.dashboard-nvim"),
+	require("kickstart.plugins.one-liners"),
 
 	require("kickstart.plugins.fzf-lua"),
 
@@ -38,9 +33,7 @@ require("lazy").setup({
 
 	require("kickstart.plugins.smear-cursor"),
 
-	require("kickstart.plugins.nvim-emmet"),
-
-	require("kickstart.plugins.render-markdown"),
+	-- require("kickstart.plugins.bufferline"),
 
 	-- require("kickstart.plugins.auto-session"),
 
@@ -52,17 +45,13 @@ require("lazy").setup({
 
 	-- require("kickstart.plugins.telescope"),
 
-	require("kickstart.plugins.lspconfig"),
+	require("kickstart.plugins.lsp"),
 
 	require("kickstart.plugins.conform"),
 
 	require("kickstart.plugins.blink-cmp"),
 
-	require("kickstart.plugins.tokyonight"),
-
-	require("kickstart.plugins.todo-comments"),
-
-	require("kickstart.plugins.mini"),
+	require("kickstart.plugins.colorscheme"),
 
 	require("kickstart.plugins.treesitter"),
 
@@ -75,11 +64,9 @@ require("lazy").setup({
 	--  Here are some example plugins that I've included in the Kickstart repository.
 	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
 	--
-	require("kickstart.plugins.debug"),
-	require("kickstart.plugins.indent_line"),
+	-- require("kickstart.plugins.debug"),
 	require("kickstart.plugins.lint"),
-	require("kickstart.plugins.autopairs"),
-	-- require("kickstart.plugins.neo-tree"),
+	require("kickstart.plugins.neo-tree"),
 
 	-- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--    This is the easiest way to modularize your config.

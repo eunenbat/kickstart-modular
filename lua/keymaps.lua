@@ -5,6 +5,10 @@
 -- 	require("persistence").load()
 -- end)
 
+vim.keymap.set({ "n", "v" }, "<leader>xe", function()
+	require("nvim-emmet").wrap_with_abbreviation()
+end, { desc = "Emmet" })
+
 -- select a session to load
 vim.keymap.set("n", "<leader>qs", function()
 	require("persistence").select()
@@ -20,11 +24,15 @@ vim.keymap.set("n", "<leader>qd", function()
 	require("persistence").stop()
 end, { desc = "session wont be saved on exit" })
 
+vim.keymap.set("n", "<leader>fb", function()
+	require("conform").format({ async = true, lsp_fallback = true })
+end, { desc = "Format buffer" })
+
 -- Previous buffer
-vim.keymap.set("n", "[b", ":bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Previous buffer" })
 
 -- Next buffer
-vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Next buffer" })
 
 -- Close current buffer
 -- vim.keymap.set("n", "<leader>bd", ":bd<CR>", { desc = "Delete buffer" })
