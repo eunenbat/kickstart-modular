@@ -24,8 +24,10 @@ require("lazy").setup({
 
 	-- modular approach: using `require 'path.name'` will
 	-- include a plugin definition from file lua/path/name.lua
-	-- require("kickstart.plugins.dashboard-nvim"),
+  -- require("kickstart.plugins.dashboard-nvim"),
 	require("kickstart.plugins.one-liners"),
+
+  require("kickstart.plugins.oil"),
 
 	require("kickstart.plugins.lualine"),
 
