@@ -76,6 +76,30 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
+
+vim.keymap.set("n", "J", "mzJz", { desc = "Join lines, keep cursor and view stable" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down and center cursor" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up and center cursor" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result centered and unfolded" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result centered and unfolded" })
+
+
+
+-- Greatest remap ever: paste over selection without overwriting the clipboard
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without yanking (visual mode)" })
+
+-- Yank to system clipboard (normal and visual modes)
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
+
+-- Yank entire line to system clipboard (normal mode only)
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboard" })
+
+-- Delete without affecting clipboard (normal and visual modes)
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
+
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.hl.on_yank()`

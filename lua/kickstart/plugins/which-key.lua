@@ -69,6 +69,31 @@ return {
 				{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } },
 			},
 		},
+		-- config = function()
+		-- 	local wk = require("which-key")
+		--
+		-- 	-- Normal mode mappings
+		-- 	wk.register({
+		-- 		["<leader>"] = {
+		-- 			p = { [["_dP]], "Paste without yanking (visual)" },
+		-- 			y = {
+		-- 				name = "Yank",
+		-- 				y = { [["+y]], "Yank to system clipboard" },
+		-- 				Y = { [["+Y]], "Yank line to system clipboard" },
+		-- 			},
+		-- 			d = { [["_d]], "Delete without yanking" },
+		-- 		},
+		-- 	}, { mode = "n", prefix = "<leader>" })
+		--
+		-- 	-- Visual mode mappings
+		-- 	wk.register({
+		-- 		["<leader>"] = {
+		-- 			p = { [["_dP]], "Paste without yanking (visual)" },
+		-- 			y = { [["+y]], "Yank to system clipboard" },
+		-- 			d = { [["_d]], "Delete without yanking" },
+		-- 		},
+		-- 	}, { mode = "v", prefix = "<leader>" })
+		-- end,
 	},
 }
 -- vim: ts=2 sts=2 sw=2 et
