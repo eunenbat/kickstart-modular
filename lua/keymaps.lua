@@ -5,6 +5,8 @@
 -- 	require("persistence").load()
 -- end)
 
+-- vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "LSP Hover" })
+
 vim.keymap.set({ "n", "v" }, "<leader>xe", function()
 	require("nvim-emmet").wrap_with_abbreviation()
 end, { desc = "Emmet" })

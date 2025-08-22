@@ -9,6 +9,7 @@ vim.opt.shiftwidth = 2 -- Number of spaces to use for each indentation level
 vim.opt.expandtab = true -- Use spaces instead of actual tab characters
 vim.opt.smartindent = true
 vim.opt.autoindent = true
+vim.opt.winborder = "rounded"
 
 vim.g.autoformat = false
 -- Make line numbers default
